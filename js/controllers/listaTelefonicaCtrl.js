@@ -1,5 +1,5 @@
 // definicao do controller e especificacao do escopo
-angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($scope, $http) {
+angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($scope, contatosAPI, operadorasAPI, serialGenerator) {
   $scope.app = "Lista Telefônica";
 
   $scope.contatos = [];
@@ -7,26 +7,29 @@ angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($s
   $scope.operadoras = [];
 
   var carregarContatos = function () {
-    $http.get("http://localhost:3412/contatos").then(function (response) {
+    contatosAPI.getContatos().then(function (response) {
       $scope.contatos = response.data;
     });
   };
 
   var carregarOperadoras = function () {
-    $http.get("http://localhost:3412/operadoras").then(function (response) {
-      $scope.operadoras = response.data;
-    }).catch(function (data, status) {
-      $scope.message = "Aconteceu um problema: " + data;
-    });
+    operadorasAPI.getOperadoras()
+      .then(function (response) {
+        $scope.operadoras = response.data;
+      }).catch(function (data, status) {
+        $scope.message = "Aconteceu um problema: " + data;
+      });
   }
 
   $scope.adicionarContato = function (contato) {
+    contato.serial = serialGenerator.generate();
     contato.data = new Date();
-    $http.post("http://localhost:3412/contatos", contato).then(function (response) {
-      delete $scope.contato;
-      $scope.contatoForm.$setPristine();
-      carregarContatos();
-    });
+    contatosAPI.saveContato(contato)
+      .then(function () {
+        delete $scope.contato;
+        $scope.contatoForm.$setPristine();
+        carregarContatos();
+      });
   };
 
   $scope.apagarContatos = function (contatos) {
