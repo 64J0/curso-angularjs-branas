@@ -1,3 +1,9 @@
+h3,
+button,
+input {
+  margin: 10px 0;
+}
+
 .jumbotron {
   max-width: 700px;
   margin-top: 20px;

@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/app.css">
+  <link rel="stylesheet" type="text/css" href="css/ui.css">
 
   <script src="node_modules/angular/angular.js"></script>
   <script src="node_modules/angular-locale-pt-br/angular-locale_pt-br.js"></script>
@@ -22,6 +23,7 @@
   <script src="js/services/serialGeneratorService.js"></script>
   <script src="js/filters/nameFilter.js"></script>
   <script src="js/filters/ellipsisFilter.js"></script>
+  <script src="js/directives/uiAlertDirective.js"></script>
 </head>
 
 <!-- Especifica a tag do controller -->
@@ -33,7 +35,9 @@
       <!-- variável app do $scope -->
       <h3>{{app}}</h3>
 
-      <h3>{{message}}</h3>
+      <ui-alert title="Ops, aconteceu um problema!">
+        {{error}}
+      </ui-alert>
 
       <input class="form-control" type="text" ng-model="criterioDeBusca" placeholder="O que você está buscando?" />
       <table class="table">

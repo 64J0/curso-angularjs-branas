@@ -9,6 +9,8 @@ angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($s
   var carregarContatos = function () {
     contatosAPI.getContatos().then(function (response) {
       $scope.contatos = response.data;
+    }).catch(function (data, status) {
+      $scope.error = "Não foi possível carregar os dados!";
     });
   };
 
@@ -16,8 +18,6 @@ angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($s
     operadorasAPI.getOperadoras()
       .then(function (response) {
         $scope.operadoras = response.data;
-      }).catch(function (data, status) {
-        $scope.message = "Aconteceu um problema: " + data;
       });
   }
 
