@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lista Telefonica</title>
+
   <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/app.css">
 
@@ -19,6 +20,8 @@
   <script src="js/services/contatosAPIService.js"></script>
   <script src="js/services/operadorasAPIService.js"></script>
   <script src="js/services/serialGeneratorService.js"></script>
+  <script src="js/filters/nameFilter.js"></script>
+  <script src="js/filters/ellipsisFilter.js"></script>
 </head>
 
 <!-- Especifica a tag do controller -->
@@ -48,7 +51,7 @@
             <input type="checkbox" ng-model="contato.selecionado" />
           </td>
           <td>{{contato.serial}}</td>
-          <td>{{contato.nome}}</td>
+          <td>{{contato.nome | name | ellipsis:10}}</td>
           <td>{{contato.telefone}}</td>
           <td>{{contato.operadora.nome}}</td>
           <td>{{contato.data | date:'dd/MM/yyyy HH:mm'}}</td>
