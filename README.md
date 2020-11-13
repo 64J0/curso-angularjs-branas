@@ -6,6 +6,12 @@ O AngularJS é um framework front-end utilizado para facilitar o desenvolvimento
 
 Embora o projeto inicial tenha sido descontinuado no final de 2016 muitas aplicações encontradas atualmente continuam a utilizar em seu core esta ferramenta, portanto o conhecimento do seu funcionamento é de vital importância para dar manutenção e entender os códigos já desenvolvidos em algumas empresas.
 
+Mantra:
+
+```
+Nós devemos evitar ler o escopo diretamente por meio do Controller e devemos evitar escrever no scope por meio da View.
+```
+
 ### Referências:
 
 * [Playlist do YouTube](https://www.youtube.com/watch?v=_y7rKxqPoyg&list=PLQCmSnNFVYnTD5p2fR4EXmtlR6jQJMbPb)

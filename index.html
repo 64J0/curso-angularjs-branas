@@ -25,6 +25,7 @@
   <script src="js/filters/ellipsisFilter.js"></script>
   <script src="js/directives/uiAlertDirective.js"></script>
   <script src="js/directives/uiDateDirective.js"></script>
+  <script src="js/directives/uiAccordion.js"></script>
 </head>
 
 <!-- Especifica a tag do controller -->
@@ -35,6 +36,26 @@
 
       <!-- variável app do $scope -->
       <h3>{{app}}</h3>
+
+      <ui-accordions>
+        <ui-accordion title="Accordion 1">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut accusantium et itaque soluta eius eos,
+          architecto
+          quod culpa voluptas, deserunt odio aliquam praesentium quis placeat pariatur sed aperiam eveniet porro.
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut accusantium et itaque soluta eius eos,
+          architecto
+          quod culpa voluptas, deserunt odio aliquam praesentium quis placeat pariatur sed aperiam eveniet porro.
+        </ui-accordion>
+
+        <ui-accordion title="Accordion 2">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut accusantium et itaque soluta eius eos,
+          architecto
+          quod culpa voluptas, deserunt odio aliquam praesentium quis placeat pariatur sed aperiam eveniet porro.
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut accusantium et itaque soluta eius eos,
+          architecto
+          quod culpa voluptas, deserunt odio aliquam praesentium quis placeat pariatur sed aperiam eveniet porro.
+        </ui-accordion>
+      </ui-accordions>
 
       <ui-alert ng-show="error" title="Ops, aconteceu um problema!">
         {{error}}
