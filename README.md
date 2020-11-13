@@ -20,6 +20,10 @@ Algumas definições e informações do universo do AngularJS:
 * **Single-Page Application:** É uma aplicação que realiza suas transições dentro de uma mesma página, carregando seus componentes de forma dinâmica utilizando AJAX.
 * **Route object:** Objeto de configuração de cada rota, permite configurar diversos aspectos do roteamento.
 * **Interceptor:** Um interceptor é um tipo de serviço que permite a interceptação das requisições e respostas do serviço $http.
+* Causas de baixa performance: Excesso de interação com a DOM e principalmente desperdício de tempo processando coisas desnecessárias, por conta da forma como o ciclo de notificação do framework, também conhecido como *digest cycle*, funciona.
+* Cuidado com as expressions que utilizam funções.
+* Opte pelo *one-time bind* sempre que fizer sentido, desta forma diminuindo a quantidade de *watchers* e o tempo de carregamento da página.
+* Mude o comportamento padrão com o *ng-model-options*.
 
 Exemplo de requisição de pasta:
 

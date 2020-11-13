@@ -42,11 +42,11 @@
       <td>
         <input type="checkbox" ng-model="contato.selecionado" />
       </td>
-      <td>{{contato.serial}}</td>
-      <td><a href="#/detalhescontato/{{contato.id}}">{{contato.nome | name}}</a></td>
-      <td>{{contato.telefone}}</td>
-      <td>{{contato.operadora.nome}}</td>
-      <td>{{contato.data | date:'dd/MM/yyyy HH:mm'}}</td>
+      <td>{{::contato.serial}}</td>
+      <td><a href="#/detalhescontato/{{contato.id}}">{{::contato.nome | name}}</a></td>
+      <td>{{::contato.telefone}}</td>
+      <td>{{::contato.operadora.nome}}</td>
+      <td>{{::contato.data | date:'dd/MM/yyyy HH:mm'}}</td>
     </tr>
   </table>
   <hr>
