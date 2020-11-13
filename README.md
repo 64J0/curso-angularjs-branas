@@ -24,6 +24,9 @@ Algumas definições e informações do universo do AngularJS:
 * Cuidado com as expressions que utilizam funções.
 * Opte pelo *one-time bind* sempre que fizer sentido, desta forma diminuindo a quantidade de *watchers* e o tempo de carregamento da página.
 * Mude o comportamento padrão com o *ng-model-options*.
+* Sempre defina o track by quando utilizar *ng-repeat* e *ng-options*.
+* Analise o impacto de aplicar os filtros diretamente na view.
+* Pense bem antes de utilizar ng-if ou ng-show.
 
 Exemplo de requisição de pasta:
 
