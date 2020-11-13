@@ -26,11 +26,36 @@ Algumas definições e informações do universo do AngularJS:
 * Mude o comportamento padrão com o *ng-model-options*.
 * Sempre defina o track by quando utilizar *ng-repeat* e *ng-options*.
 * Analise o impacto de aplicar os filtros diretamente na view.
-* Pense bem antes de utilizar ng-if ou ng-show.
+* Pense bem antes de utilizar ng-if (controla realmente o que será renderizado) ou ng-show (muda apenas a propriedade css).
 
 Exemplo de requisição de pasta:
 
 * *http://127.0.0.1:5500/index.html#/contatos*
+
+## Como executar:
+
+```bash
+# 1. clonar o repositorio
+$ git clone <link>
+
+# 2. entrar na pasta com o codigo
+$ cd curso-angularjs-branas/
+
+# 3. instalar dependencias
+$ npm install
+
+# 4. entrar na pasta do backend
+$ cd backend/
+
+# 5. iniciar o servidor
+$ node contatosBackend.js
+
+# 6. abrir o index.html no navegador
+# podem ocorrer problemas de CORS
+# para resolver isso deve ser servido o 
+# index.html a partir de um servidor
+# por exemplo o Live Server do VS Code
+```
 
 ## Referências:
 

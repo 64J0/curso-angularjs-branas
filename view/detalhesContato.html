@@ -1,5 +1,8 @@
 <div class="jumbotron">
-  <table style="background-color: rgba(180, 180, 180, 0.4);" class="table">
+  <h3>{{title}}</h3>
+  <br>
+
+  <table class="table table-dark table-bordered">
     <tr>
       <td style="font-weight: bold;">Nome:</td>
       <td>{{contato.nome}}</td>
@@ -13,5 +16,7 @@
       <td>{{contato.data | date:"dd/MM/yyyy"}}</td>
     </tr>
   </table>
+
+  <br>
   <a class="btn btn-primary btn-block" href="#/contatos">Voltar</a>
 </div>
