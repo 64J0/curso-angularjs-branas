@@ -8,6 +8,10 @@ angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($s
 
   var carregarContatos = function () {
     contatosAPI.getContatos().then(function (response) {
+      response.data.length > 0 && response.data.forEach(contato => {
+        contato.serial = serialGenerator.generate()
+      });
+
       $scope.contatos = response.data;
     }).catch(function (data, status) {
       $scope.error = "Não foi possível carregar os dados!";

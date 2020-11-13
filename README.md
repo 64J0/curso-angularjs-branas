@@ -8,9 +8,15 @@ Embora o projeto inicial tenha sido descontinuado no final de 2016 muitas aplica
 
 Mantra:
 
+```bash
+# Nós devemos evitar ler o escopo diretamente por meio do Controller 
+# e devemos evitar escrever no scope por meio da View.
 ```
-Nós devemos evitar ler o escopo diretamente por meio do Controller e devemos evitar escrever no scope por meio da View.
-```
+
+Algumas definições e informações do universo do AngularJS:
+
+* **Módulo:** Um módulo é uma coleção de componentes, ou seja, um conjunto de controllers, directives, filters, services, entre outros tipos de componente utilizados pela aplicação.
+* Na primeira vez que um template é carregado, ele é armazenado em cache e acessível por meio do serviço $templateCache.
 
 ### Referências:
 
