@@ -4,14 +4,16 @@ angular.module("listaTelefonica").directive("uiDate", function ($filter) {
     link: function (scope, element, attrs, ctrl) {
       var _formatDate = function (date) {
         // substitui as informacoes que nao satisfazem a regex por espaco em branco
-        date = date.replace(/[^0-9]+/g, "");
+        if (date) {
+          date = date.replace(/[^0-9]+/g, "");
 
-        if (date.length > 2) {
-          date = date.substring(0, 2) + "/" + date.substring(2);
-        }
+          if (date.length > 2) {
+            date = date.substring(0, 2) + "/" + date.substring(2);
+          }
 
-        if (date.length > 5) {
-          date = date.substring(0, 5) + "/" + date.substring(5, 9);
+          if (date.length > 5) {
+            date = date.substring(0, 5) + "/" + date.substring(5, 9);
+          }
         }
 
         return date;

@@ -1,0 +1,19 @@
+<center>
+  <div class="jumbotron">
+    <table style="background-color: rgba(180, 180, 180, 0.4);" class="table">
+      <tr>
+        <td style="font-weight: bold;">Nome:</td>
+        <td>{{contato.nome}}</td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold;">Telefone:</td>
+        <td>{{contato.telefone}}</td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold;">Data:</td>
+        <td>{{contato.data | date:"dd/MM/yyyy"}}</td>
+      </tr>
+    </table>
+    <a class="btn btn-primary btn-block" href="#/contatos">Voltar</a>
+  </div>
+</center>
