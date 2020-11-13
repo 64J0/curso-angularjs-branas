@@ -6,7 +6,7 @@ input {
 
 .jumbotron {
   max-width: 700px;
-  margin-top: 20px;
+  margin: 20px auto;
 }
 
 .selecionado {

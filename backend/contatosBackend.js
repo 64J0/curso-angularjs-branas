@@ -35,7 +35,13 @@ app.get('/contatos', function (req, res) {
 
 app.get('/contatos/:id', function (req, res) {
   const id = req.params.id;
-  res.json(contatos[id]);
+  const contato = contatos.find(contato => contato.id == id);
+
+  if (!contato) {
+    return res.status(404).send();
+  }
+
+  res.json(contato);
 });
 
 app.post('/contatos', function (req, res) {

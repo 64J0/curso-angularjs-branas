@@ -18,7 +18,8 @@ Algumas definições e informações do universo do AngularJS:
 * **Módulo:** Um módulo é uma coleção de componentes, ou seja, um conjunto de controllers, directives, filters, services, entre outros tipos de componente utilizados pela aplicação.
 * Na primeira vez que um template é carregado, ele é armazenado em cache e acessível por meio do serviço $templateCache.
 * **Single-Page Application:** É uma aplicação que realiza suas transições dentro de uma mesma página, carregando seus componentes de forma dinâmica utilizando AJAX.
-* **route object:** Objeto de configuração de cada rota, permite configurar diversos aspectos do roteamento.
+* **Route object:** Objeto de configuração de cada rota, permite configurar diversos aspectos do roteamento.
+* **Interceptor:** Um interceptor é um tipo de serviço que permite a interceptação das requisições e respostas do serviço $http.
 
 Exemplo de requisição de pasta:
 
